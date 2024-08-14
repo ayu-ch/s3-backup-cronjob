@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  backup:
+    build: .
+    volumes:
+      - ./data:/data 
+    environment:
+      - .env
