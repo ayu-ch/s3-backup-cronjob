@@ -21,7 +21,7 @@ backup_fileout_name = f'backup-{timestamp}.tar.gz'
 out_tar_local = f'/tmp/{backup_fileout_name}'
 
 with tarfile.open(out_tar_local, 'w:gz') as tar:
-    tar.add('/data', recursive=True)
+    tar.add('/data/', recursive=True)
 
 out_tar_remote = f'backup/{backup_fileout_name}'
 

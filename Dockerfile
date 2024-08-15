@@ -1,10 +1,10 @@
-FROM python:3.8-alpine
+FROM python:alpine
 
 COPY backup.py /
-COPY /folder /backup/
+COPY /data /data/
 COPY entrypoint.sh /
-
-RUN pip install boto3 awscli
+COPY .env /
+RUN pip install boto3 awscli python-dotenv
 
 RUN chmod +x /entrypoint.sh
 
