@@ -1,6 +1,7 @@
 FROM python:alpine
 
 COPY backup.py /
+COPY recover.py /
 COPY /data /data/
 COPY entrypoint.sh /
 COPY .env /
